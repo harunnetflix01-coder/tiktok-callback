@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clip Borsası</title><link rel="stylesheet" href="style.css"></head><body>
+<h1>Clip Borsası</h1>
+<p>Clip Borsası (app name: kickshorts) prepares short vertical highlight clips from Kick live streams. Every clip is reviewed by a person before it is posted to our own social media accounts, including TikTok.</p>
+<p id="auth"></p>
+<p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
+<script>
+// TikTok Login Kit sends the browser here with ?code=...&state=...
+// Nothing is processed on this page; the operator copies the address back into the local tool.
+var q=new URLSearchParams(location.search);
+if(q.get("code")){document.getElementById("auth").textContent="Authorization received. Copy the full address from the address bar and paste it into the tool.";}
+else if(q.get("error")){document.getElementById("auth").textContent="Authorization failed: "+(q.get("error_description")||q.get("error"));}
+</script>
+<footer>© 2026 Clip Borsası</footer></body></html>
